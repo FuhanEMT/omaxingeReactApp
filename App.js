@@ -38,6 +38,13 @@ const styles = StyleSheet.create({
     },
     flexDirection: "row",
     flexWrap: "wrap",
+  },
+  Contentorl: {
+    padding: 20,
+    paddingLeft: 10,
+    fontSize: 22,
+    color: '#000',
+    fontWeight: 'bold'
   }
 })
 
@@ -65,8 +72,21 @@ class BannerImages extends Component {
       <View>
         <Image source={{
           uri: 'https://facebook.github.io/react/logo-og.png',
-        }} style={{ width: 100, height: 100 }} />
+        }} style={{ width: '100%', height: 200 }} />
       </View>
+    )
+  }
+}
+
+class Contentorl extends Component {
+  render() {
+    return (
+      <>
+        <Text style={styles.Contentorl}> React-Native笔记记录 </Text>
+        <View>
+
+        </View>
+      </>
     )
   }
 }
@@ -78,6 +98,7 @@ const App: () => Node = () => {
     <View>
       <Header />
       <BannerImages />
+      <Contentorl />
     </View>
 
   );
